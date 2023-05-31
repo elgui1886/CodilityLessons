@@ -6,7 +6,11 @@ export type GenericClassDecorator<T> = (type: T) => void;
 export const Injectable = (): GenericClassDecorator<Constructor<object>> => {
   console.log('decorator factory')
   return (constructor: Constructor<object>) => {
-    console.log(constructor);
+    console.log(
+      '[Injectable]',
+      constructor.name,
+      Reflect.getMetadata('design:paramtypes', constructor)
+    );
   };
 };
 

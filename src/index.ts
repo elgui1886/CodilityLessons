@@ -1,2 +1,4 @@
-import * as decorators from "./decorators/decorators";
-import * as observe from "./observe/model";
+import "reflect-metadata";
+
+
+console.log('CIAO HOLAAA')

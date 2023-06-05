@@ -1,4 +1,8 @@
 import "reflect-metadata";
+import { InjectorBase, MovieService } from "./decorators/decorators";
 
 
-console.log('CIAO HOLAAA')
+const injector = new InjectorBase()
+
+const movie = injector.resolve<MovieService>(MovieService);
+console.log(movie.getData())
